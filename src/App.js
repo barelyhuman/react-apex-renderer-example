@@ -1,3 +1,4 @@
+import React from "react";
 import Chart from "chart.js/auto";
 import { Apex } from "./Apex";
 import debounce from "lodash.debounce";
@@ -28,7 +29,7 @@ const debouncedSearch = debounce((value, data) => {
 
 function WeatherView({ data }) {
   return (
-    <>
+    <div>
       <p>
         Selected Location:{" "}
         {[data.selectedLocation.name, data.selectedLocation.country]
@@ -66,7 +67,7 @@ function WeatherView({ data }) {
           }}
         ></canvas>
       </div>{" "}
-    </>
+    </div>
   );
 }
 
@@ -120,7 +121,8 @@ async function getWeatherForecast(location) {
 
 function toChartJSConfig(forecast, location) {
   const data = {
-    labels: forecast?.time?.map((x) => new Date(x).toLocaleDateString()) || [],
+    labels:
+      (forecast.time || []).map((x) => new Date(x).toLocaleDateString()) || [],
     datasets: [
       {
         label: [location.name, location.country].filter(Boolean).join(","),

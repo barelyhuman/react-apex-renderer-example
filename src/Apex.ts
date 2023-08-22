@@ -3,11 +3,11 @@ import { effect, reactive, isReactive } from "@vue/reactivity";
 import { isEqual } from "ohash";
 
 export function Apex<D, P>(data: D, renderer) {
-  const apexThis = this;
+  const apexThis = this || {};
   apexThis.destroyHandlers = [];
   apexThis.mountHandlers = [];
 
-  class EffectRenderer extends React.Component {
+  class EffectRenderer extends React.Component<P> {
     tree: null | React.ReactNode;
     $data: D;
 
