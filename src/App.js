@@ -16,7 +16,7 @@ const Weather = Apex(
     forecast: {},
     locationSearchTerm: "",
     selectedLocation: {},
-    locationList: [],
+    locationList: []
   },
   WeatherView
 );
@@ -90,7 +90,7 @@ async function onLocationSelect(item, state) {
     chartInstance = new Chart(chartRef, {
       type: "line",
       data: toChartJSConfig(forecast, state.selectedLocation),
-      responsive: true,
+      responsive: true
     });
   } else {
     chartInstance.data = toChartJSConfig(forecast, state.selectedLocation);
@@ -114,7 +114,7 @@ async function getWeatherForecast(location) {
   return (
     {
       ...data.hourly,
-      temperatures: data.hourly.temperature_2m,
+      temperatures: data.hourly.temperature_2m
     } || {}
   );
 }
@@ -127,13 +127,18 @@ function toChartJSConfig(forecast, location) {
       {
         label: [location.name, location.country].filter(Boolean).join(","),
         data: forecast.temperatures,
+        pointRadius: forecast.temperatures.map((x, i) =>
+          forecast.temperatures.length - 1 > i ? 0 : 5
+        ),
+
+        fill: true,
+        backgroundColor: "rgba(0,0,0,0.12)",
         borderColor: "#000",
-        backgroundColor: "#181819",
         borderWidth: 2,
         borderRadius: Number.MAX_VALUE,
-        borderSkipped: false,
-      },
-    ],
+        borderSkipped: false
+      }
+    ]
   };
   return data;
 }
