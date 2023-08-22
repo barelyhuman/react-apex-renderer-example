@@ -763,18 +763,6 @@
     "@parcel/utils" "2.9.3"
     nullthrows "^1.1.1"
 
-"@preact/signals-core@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@preact/signals-core/-/signals-core-1.4.0.tgz#ff67fca60f144437f3894ab60272eb57cf8cafaf"
-  integrity sha512-5iYoZBhELLIhUQceZI7sDTQWPb+xcVSn2qk8T/aNl/VMh+A4AiPX9YRSh4XO7fZ6pncrVxl1Iln82poVqYVbbw==
-
-"@preact/signals@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@preact/signals/-/signals-1.2.1.tgz#e593036a4d2acc3b23578418af1fd002fc19cb25"
-  integrity sha512-hRPvp1C2ooDzOHqfnhdpHgoIFDbYFAXLhoid3+jSItuPPD/J0r/UsiWKv/8ZO/oEhjRaP0M5niuRYsWqmY2GEA==
-  dependencies:
-    "@preact/signals-core" "^1.4.0"
-
 "@swc/core-darwin-arm64@1.3.78":
   version "1.3.78"
   resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.78.tgz#352c39630f97376b9de367eb1955965c6d2cef64"

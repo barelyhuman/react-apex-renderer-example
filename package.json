@@ -7,7 +7,6 @@
     "dev": "parcel index.html"
   },
   "dependencies": {
-    "@preact/signals": "^1.2.1",
     "@vue/reactivity": "^3.3.4",
     "chart.js": "^4.3.3",
     "lodash.debounce": "^4.0.8",
