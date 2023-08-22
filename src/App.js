@@ -36,7 +36,7 @@ function WeatherView({ data }) {
           .filter(Boolean)
           .join(",")}
       </p>
-      <div class="autocomplete-wrapper">
+      <div className="autocomplete-wrapper">
         <input
           className="autocomplete-input"
           value={data.locationSearchTerm}
@@ -45,7 +45,7 @@ function WeatherView({ data }) {
             debouncedSearch(e.target.value, data);
           }}
         />
-        <div class="autocomplete">
+        <div className="autocomplete">
           {data.locationList.map((x) => {
             return (
               <LocationItem
@@ -58,7 +58,7 @@ function WeatherView({ data }) {
           })}
         </div>
       </div>
-      <div class="mt-100px">
+      <div className="mt-100px">
         <canvas
           ref={(node) => {
             if (node) {
@@ -73,7 +73,7 @@ function WeatherView({ data }) {
 
 function LocationItem({ data, onClick }) {
   return (
-    <div class="autocomplete-item" onClick={() => onClick(data)}>
+    <div className="autocomplete-item" onClick={() => onClick(data)}>
       {data.name},{data.country}
     </div>
   );
