@@ -1,0 +1,31 @@
+@import url("https://rsms.me/raster/raster2.css?v=20");
+
+.autocomplete-wrapper {
+  position: absolute;
+
+  & > .autocomplete-input {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  & > .autocomplete {
+    position: relative;
+    bottom: 0px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+
+    & > .autocomplete-item {
+      padding: 10px;
+    }
+
+    & > .autocomplete-item:hover {
+      cursor: pointer;
+      background: #efefef;
+    }
+  }
+}
+
+.mt-100px {
+  margin-top: 100px;
+}
